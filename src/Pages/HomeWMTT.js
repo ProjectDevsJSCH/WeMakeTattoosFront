@@ -77,7 +77,7 @@ class HomeWMTT extends React.Component {
                 <InformationArea />
                 <div id="Galery"></div>
                 <GallerySection />
-                <ArtistSection />
+                {/* <ArtistSection /> */}
                 <Footer/>
                 
                 {/*<div id='artistas' className='Artistsback'>
