@@ -1,0 +1,119 @@
+.Galerybackground {
+    background-color: black;
+    padding-bottom: 5%;
+    position: relative;
+    top: -70px;
+}
+
+.Categorybutton.col-4 {
+    padding: 0;
+}
+
+.Categorybutton.col-4 button {
+    width: 100%;
+}
+
+.Galeryimgs{
+    padding: 2% 5% 0 5% !important;
+}
+
+ul.dropdown-menu.show {
+    width: 100%;
+}
+
+.dropdown-menu {
+    padding: 0 !important;
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+    white-space: nowrap;
+    font-family: "Kaushan";
+    background-color: #441c1c !important;
+    color: white !important;
+}
+
+Select {
+    background-color: #331313 !important;
+    font-family: 'Aladdin' !important;
+    font-size: 1.5rem !important;
+    border: none !important;
+    color: white !important;
+}
+
+.custom-select:focus{
+    border: none;
+    box-shadow: none !important;
+}
+
+Select>option {
+    font-size: 1.2rem !important;
+}
+
+div select option:hover {
+    background-color: white;
+}
+
+.btn-primary:focus, .btn-primary.focus{
+    box-shadow: none !important;
+}
+
+.Optionselected:hover{
+    background-color: white;
+}
+
+a.page-link {
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 40px;
+    text-align: center;
+    margin: 0 1px;
+}
+
+a.page-link:focus{
+    box-shadow: 0 0 0 1px rgb(255, 255, 255);
+}
+
+a.page-link[aria-label = Previous], a.page-link[aria-label = Next] {
+    background-color: transparent;
+    border-radius: 30px;
+    border: 1px solid white;
+    color: white;
+    width: 60px;
+}
+.Imgpreview {
+    padding-right: 40px;
+    padding-top: 50px;
+    max-width: 60vh;
+    margin: auto;
+}
+.card {
+    margin: auto;
+}
+.ArtistProfile {
+    background-color: #331313;
+    border: 1px solid #331313;
+    border-radius: 50px;
+    display: flex;
+}
+.ArtistAvatar>img {
+    height: 100%;
+}
+.ArtistAvatar {
+    width: 50%;
+    height: 90px;
+}
+.ArtistName {
+    width: 50%;
+    color: white;
+    font-family: 'Aladdin';
+    font-size: 3vw;
+    margin: auto;
+
+}

@@ -1,0 +1,77 @@
+
+@font-face {
+    font-family: Aladdin;
+    src: url(../../Fonts/Aladin-Regular.ttf)
+}
+
+.Navbar1 {
+    z-index: 20;
+    height: 70px;
+    position: sticky;
+    top: 0;
+}
+
+.Navbar_navigation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(167, 167, 167, 0.85)!important;
+}
+
+.NavLogo {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.Navbar_items {
+    width: 100%;
+}
+
+.Navbar_items ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.Navbar_items a {
+    color: white;
+    font-family: 'Aladdin';
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+@media (max-width: 900px){
+    .Navbar_items a {
+        font-size: 20px;
+    }
+}
+
+.Navbar_items a:hover {
+    color: #331313;
+    text-decoration: none;
+}
+
+.Navbar_items a:active {
+    font-weight: bold;
+}
+
+nav ul a:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.Homeimg {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 70px;
+}

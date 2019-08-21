@@ -1,0 +1,11 @@
+.LogoHeader {
+   height: 70px;
+   background-color: #331313;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.Navbar_logo {
+   height: 80%;
+}

@@ -1,0 +1,30 @@
+
+@font-face {
+   font-family: Kaushan;
+   src: url(../../Fonts/KaushanScript-Regular.ttf)
+}
+
+.Informationbar {
+   position: relative;
+   top: -70px;
+   margin: 5% 0;
+}
+
+.Informationtext {}
+
+.Informationtext h1 {
+   font-family: "Kaushan";
+   text-align: center;
+   font-size: 3vw;
+   padding: 3%;
+   margin: 0 5% 5% 5%;
+   background-color: #331313;
+   color: white;
+   
+}
+
+.Informationimgs {}
+
+.Informationimgs img {
+   width: 100%;
+}

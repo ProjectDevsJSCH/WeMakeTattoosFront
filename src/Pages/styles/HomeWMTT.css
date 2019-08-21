@@ -1,0 +1,63 @@
+body{
+    background-color: #E2E2E2 !important;
+}
+
+.Homeview {
+    background-image: url("../../img/tattoo-maschine.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: calc(100vh - 70px);
+    position: relative;
+    top: -70px;
+    z-index: -1;
+}
+
+@font-face {
+    font-family: Chocolatine;
+    src: url(../../Fonts/Chocolatines.ttf)
+}
+
+.Hometext {
+    font-family: 'Chocolatine';
+    font-size: 7vw;
+    color: white;
+    letter-spacing: 5px;
+}
+
+@media (max-width: 900px) {
+    .Hometext {
+        font-size: 8vw;
+    }
+}
+
+.Homespacer {
+    width: 100%;
+    height: 20vh;
+}
+
+.tittle {
+    text-align: center;
+    padding-top: 2%;
+}
+
+.Boxflex {
+    background-image: url("../../img/Polígono 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 70px);
+    align-items: center;
+}
+
+.Spacer {
+    height: 10vh;
+}
+
+#Galery{
+    height: 70px;
+    position: relative;
+    top: -70px;
+}
