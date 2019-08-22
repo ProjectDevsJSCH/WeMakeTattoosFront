@@ -16,9 +16,9 @@ class Footer extends React.Component {
                   <img src={Logo} alt="Logo icon" />
                </div>
                <div className="Footercontact col-md-3 d-flex flex-column justify-content-center align-items-center">
-                  <h7>Info@wemaketattoos.com</h7>
-                  <h7>3012647584</h7>
-                  <h7>BOGOTÀ - COLOMBIA</h7>
+                  <h6>Info@wemaketattoos.com</h6>
+                  <h6>3012647584</h6>
+                  <h6>BOGOTÀ - COLOMBIA</h6>
                </div>
                <div className="Footersocial col-md-3 col-sm-6 d-flex justify-content-around align-items-center">
                   <img src={facebook} alt="facebook" />

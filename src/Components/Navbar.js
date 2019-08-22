@@ -17,7 +17,7 @@ class Navbar extends React.Component {
                     <div className='Navbar_items'>
                         <ul>
                             <li><a href='#inicio'>Inicio</a></li>
-                            <li><a href='#Galery'>Galería</a></li>
+                            <li><a href='#Gallery'>Galería</a></li>
                             <li><a href='#Footer'>Contacto</a></li>
                         </ul>
                     </div>

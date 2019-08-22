@@ -4,7 +4,7 @@ import Navbar from '../Components/Navbar';
 import LogoNavbar from "../Components/LogoNavbar";
 import InformationArea from '../Components/InformationArea';
 import GallerySection from '../Components/GallerySection';
-import ArtistSection from '../Components/ArtistSection';
+// import ArtistSection from '../Components/ArtistSection';
 
 import './styles/HomeWMTT.css'
 import Footer from '../Components/Footer';
@@ -75,37 +75,12 @@ class HomeWMTT extends React.Component {
                     </div>
                 </div>
                 <InformationArea />
-                <div id="Galery"></div>
+                <div id="Gallery"></div>
                 <GallerySection />
                 {/* <ArtistSection /> */}
                 <Footer/>
                 
-                {/*<div id='artistas' className='Artistsback'>
-                    <div className='container'>
-                        <Categories newSearch={this.handleChange} />
-                    </div>
-                     <div className='Flexbox'>
-                        <ul className="row sidesPadding">
-                            <li className="" >
-                                {this.state.data.list.map(Artist => (
-                                    <div className='CardSize col s12 m4 l4'>
-                                        <ArtistCard
-                                            FullName={Artist.FullName}
-                                            BirthDate={Artist.BirthDate}
-                                            StartDate={Artist.StartDate}
-                                            Email={Artist.Email}
-                                            PhoneNumber={Artist.PhoneNumber}
-                                            Address={Artist.Address}
-                                        />
-                                    </div>
-                                ))}
-                            </li>
-                        </ul>
-                    </div> 
-                </div>*/}
-                {/* <div id='categorias' className='Categoriesbox'>
-                        <Categories />
-                    </div> */}
+                
             </div>
         )
     }
