@@ -4,9 +4,11 @@ import axios from 'axios';
 import ImageContainer from './ImageContainer';
 import MasonryLayout from "./MasonryLayout";
 import Pagination from "react-js-pagination";
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 import './styles/GallerySection.css';
-import Avatar from "../img/avatar-icon.png"
+import Avatar from "../img/avatar-icon.png";
 
 class GallerySection extends React.Component {
 
@@ -16,7 +18,8 @@ class GallerySection extends React.Component {
         actualCategory: 1,
         actualPage: 1,
         numberOfImages: 0,
-        previewImage: ""
+        previewImage: "",
+        isOpen: false
     }
 
     firstPagePerCategory() {
@@ -43,10 +46,6 @@ class GallerySection extends React.Component {
         });
     }
 
-    handlePageChange(pageNumber) {
-        this.setState({ actualPage: pageNumber }, () => { this.fetchImagesPerPage() });
-    }
-
     fetchCategories() {
         axios({
             url: `https://localhost:44376/api/Category`,
@@ -67,8 +66,12 @@ class GallerySection extends React.Component {
         });
     }
 
-    changePreviewImage(urlImage){
-        this.setState({previewImage: urlImage})
+    changePreviewImage(urlImage) {
+        this.setState({ previewImage: urlImage, isOpen: true });
+    }
+
+    handlePageChange(pageNumber) {
+        this.setState({ actualPage: pageNumber }, () => { this.fetchImagesPerPage() });
     }
 
     componentDidMount() {
@@ -90,18 +93,24 @@ class GallerySection extends React.Component {
                     </div>
                 </div>
                 <div className="Gallerysection row d-flex justify-content-center align-items-center">
-                    <div className="Galleryimgs col-lg-5 d-flex flex-column">
+                    <div className="Galleryimgs col-lg-8 d-flex flex-column">
                         <div className="flex-fill">
-                            <MasonryLayout columns={3} gap={25}>
+                            <MasonryLayout columns={4} gap={25}>
                                 {this.state.images.map(url => (
-                                    <ImageContainer key={url.TattoosByArtistId} URLImage={url.TattooImgUrl} imageSelected={this.changePreviewImage.bind(this)}/>
+                                    <ImageContainer key={url.TattoosByArtistId} URLImage={url.TattooImgUrl} imageSelected={this.changePreviewImage.bind(this)} />
                                 ))}
                             </MasonryLayout>
+                            {this.state.isOpen && (
+                                <Lightbox
+                                    mainSrc={this.state.previewImage}
+                                    onCloseRequest={() => this.setState({ isOpen: false })}
+                                />
+                            )}
                         </div>
                         <div >
                             <Pagination
                                 activePage={this.state.actualPage}
-                                itemsCountPerPage={6}
+                                itemsCountPerPage={16}
                                 totalItemsCount={this.state.numberOfImages}
                                 pageRangeDisplayed={5}
                                 itemClass="page-item Boxnumber"
@@ -109,23 +118,6 @@ class GallerySection extends React.Component {
                                 innerClass="pagination d-flex justify-content-center align-self-end"
                                 onChange={this.handlePageChange.bind(this)}
                             />
-                        </div>
-                    </div>
-                    <div id="PreviewCard" className="Imgpreview col-lg-5 d-flex justify-content-center align-items-center">
-                        <div className="row">
-                            <div className="card col-10" >
-                                <img className="card-img-top" src={this.state.previewImage} alt="Card"></img>
-                                <div className="card-body-artist card-body d-flex justify-content-center">
-                                    <div className='ArtistProfile'>
-                                        <div className='ArtistAvatar'>
-                                            <img src={Avatar} alt="avatar1" />
-                                        </div>
-                                        <div className='ArtistName'>
-                                            artista 1
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

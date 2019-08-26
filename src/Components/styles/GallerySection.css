@@ -63,6 +63,16 @@ div select option:hover {
     background-color: white;
 }
 
+/* Imagenes */
+
+.ImageLoaded{
+    height: 100% !important;
+}
+
+.OpenImage{
+    height: 100% !important;
+}
+
 /* Paginacion */
 
 .page-item.Boxnumber.disabled .page-link.Boxlink{
@@ -91,6 +101,10 @@ div select option:hover {
 
 .card {
     margin: auto;
+}
+
+.CardSize {
+    height: 200px;
 }
 
 .Imgpreview, .Imgpreview .card{

@@ -1,0 +1,44 @@
+<------------ COMPONENTE PADRE ------------------>
+
+changePreviewImage(urlImage) {
+   this.setState({ previewImage: urlImage })
+}
+
+<div>
+   {/* <MasonryLayout columns={3} gap={25}>
+         {this.state.images.map(url => (
+            <ImageContainer key={url.TattoosByArtistId} URLImage={url.TattooImgUrl} imageSelected={this.changePreviewImage.bind(this)} />
+         ))}
+      </MasonryLayout> */}
+</div>
+
+<div>
+   {<MasonryLayout columns={3} gap={25}>
+      {this.state.images.map(url => (
+         <ModalImage
+               className="img-thumbnail ImageLoaded"
+               small={url.TattooImgUrl}
+               large={url.TattooImgUrl}
+               hideDownload={true}
+         />
+      ))}
+   </MasonryLayout>}
+</div>
+
+<------------ COMPONENTE HIJO ------------------>
+
+class ImageContainer extends React.Component {
+
+   imageClicked = (e, url) => {
+      e.preventDefault();
+      this.props.imageSelected(url);
+   }
+
+   render() {
+      return (
+         <a ref="linkImg" href="#" onClick={(e) => this.imageClicked(e, this.props.URLImage)}><img className="img-thumbnail ImageLoaded" src={this.props.URLImage} alt="Renderización" /></a>
+      );
+   }
+}
+
+export default ImageContainer;

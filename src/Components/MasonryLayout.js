@@ -12,7 +12,7 @@ const MasonryLayout = props => {
    for (let i = 0; i < props.children.length; i++) {
       const columnIndex = i % props.columns;
       columnWrapper[`column${columnIndex}`].push(
-         <div key={i} style={{ marginBottom: `${props.gap}px`, display: "flex", justifyContent: "center" }}>
+         <div key={i} className='CardSize' style={{ paddingBottom: `${props.gap}px`, display: "flex", justifyContent: "center" }}>
             {props.children[i]}
          </div>
       );
@@ -22,7 +22,6 @@ const MasonryLayout = props => {
       result.push(
          <div
             style={{
-               margin: "auto",
                marginLeft: `${i > 0 ? props.gap : 0}px`,
                flex: 1,
             }} key={i}>
