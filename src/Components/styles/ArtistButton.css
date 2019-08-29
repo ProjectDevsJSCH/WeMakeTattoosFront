@@ -1,0 +1,38 @@
+/* Botón artista */
+
+.ril__captionContent{
+   width: 100%;
+   height: 90px;
+   padding: 0;
+}
+
+.Artistbutton:hover{
+   color: black !important;
+   background-color: white !important;
+}
+
+.Artistbutton{
+   height: 70px;;
+   background-color: #331313 !important;
+   border-color: white !important;
+   color: white !important;
+   border-radius: 30px !important;
+   margin: 0 10px !important;
+}
+
+.Buttonback{
+   height: 100%;
+}
+
+.Artistimage{
+   width: 50px;
+   height:50px;
+   border-radius: 100px;
+}
+
+.Artistname {
+   margin: 0;
+   padding: 0 20px;
+   font-family: 'Aladdin';
+   font-size: 1.2rem;
+}

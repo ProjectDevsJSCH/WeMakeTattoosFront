@@ -4,23 +4,11 @@
    color: white;
 }
 
-/* #Footer div{
-   border: 1px solid white;
-} */
-
-.Footerlogo{
-   padding: 2%;
-}
-
-@media (max-width: 991px){
+/* @media (max-width: 991px){
    .Footerlogo.justify-content-end{
       justify-content: center !important;
    }
-}
-
-.Footerlogo img{
-   height: 100px;
-}
+} */
 
 .Footercontact{
    font-family: 'Aladdin';

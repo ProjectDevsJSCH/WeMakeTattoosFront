@@ -1,5 +1,10 @@
 #Artists {
-   height: 100vh;  /*guia*/
-   background-color: black;
-   margin-top: 10%;
+}
+
+div#Artists {
+   border: 1px solid black;
+}
+
+.artistCard{
+   width: 80vw;
 }

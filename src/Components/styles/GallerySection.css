@@ -45,7 +45,7 @@ ul.dropdown-menu.show {
 Select {
     background-color: #331313 !important;
     font-family: 'Aladdin' !important;
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     border: none !important;
     color: white !important;
 }
@@ -97,46 +97,8 @@ div select option:hover {
     margin: 30px 0;
 }
 
-/* Previsualizacion de la imagen */
-
-.card {
-    margin: auto;
-}
+/* thumbnail imagenes */
 
 .CardSize {
     height: 200px;
-}
-
-.Imgpreview, .Imgpreview .card{
-    padding: 1.2rem;
-}
-
-.card-body-artist{
-    padding-bottom: 0 !important;   
-}
-
-.ArtistProfile {
-    background-color: #331313;
-    border: 1px solid #331313;
-    border-radius: 50px;
-    display: flex;
-    height: 70px;
-    width: 250px;
-}
-
-.ArtistAvatar>img {
-    height: 100%;
-}
-
-.ArtistAvatar {
-    width: 50%;
-}
-
-.ArtistName {
-    width: 50%;
-    color: white;
-    font-family: 'Aladdin';
-    font-size: 20px;
-    margin: auto;
-
 }

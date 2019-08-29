@@ -4,64 +4,35 @@ import Navbar from '../Components/Navbar';
 import LogoNavbar from "../Components/LogoNavbar";
 import InformationArea from '../Components/InformationArea';
 import GallerySection from '../Components/GallerySection';
-// import ArtistSection from '../Components/ArtistSection';
+import ArtistSection from '../Components/ArtistSection';
 
 import './styles/HomeWMTT.css'
 import Footer from '../Components/Footer';
 
 
 class HomeWMTT extends React.Component {
+
+    constructor(props) {
+        super(props);
+        
+        this.loadArtist = this.loadArtist.bind(this);
+        this.openArtist = this.openArtist.bind(this);
+    }
+    
     state = {
-        loading: true,
-        error: null,
-        data: {
-            idElement: null,
-            errorMessage: null,
-            succeed: true,
-            response: null,
-            list: [],
-        },
-        nextPage: 1
+        showArtist: false,
+        artistId: 0
     };
 
-    handleChange = dataFromCategory => {
-        this.setState({
-            loading: false,
-            data: {
-                idElement: dataFromCategory.idElement,
-                errorMessage: dataFromCategory.errorMessage,
-                succeed: dataFromCategory.succeed,
-                response: dataFromCategory.response,
-                list: dataFromCategory.list,
-            }
-        });
+    loadArtist(artistId){
+        this.setState({artistId: artistId});
+    }
+
+    openArtist(){
+        this.setState({showArtist: true});
     }
 
     componentDidMount() {
-        this.fetchArtists();
-    }
-
-    fetchArtists = async () => {
-        this.setState({ loading: true, error: null });
-        try {
-            const response = await fetch(
-                `https://localhost:44376/api/Artist`, { mode: 'cors' }
-            );
-
-            const dataReceived = await response.json();
-            this.setState({
-                loading: false,
-                data: {
-                    idElement: dataReceived.idElement,
-                    errorMessage: dataReceived.errorMessage,
-                    succeed: dataReceived.succeed,
-                    response: dataReceived.response,
-                    list: dataReceived.list,
-                }
-            });
-        } catch (error) {
-            this.setState({ loading: false, error: error });
-        }
     }
 
     render() {
@@ -76,11 +47,11 @@ class HomeWMTT extends React.Component {
                 </div>
                 <InformationArea />
                 <div id="Gallery"></div>
-                <GallerySection />
-                {/* <ArtistSection /> */}
-                <Footer/>
-                
-                
+                <GallerySection onChange={this.loadArtist} onClickHome={this.openArtist}/>
+                {this.state.showArtist && (
+                    <ArtistSection actualArtist={this.state.artistId}/>
+                )}
+                {/* <Footer /> */}
             </div>
         )
     }
